@@ -1,0 +1,231 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_banner_UKAedt": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_HXc7Tz": {
+          "type": "heading",
+          "settings": {
+            "heading": "私たちについて",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_HXc7Tz"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/about-FV.jpg",
+        "image_overlay_opacity": 20,
+        "image_height": "small",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "scheme-b20756f5-a411-42c6-8143-f4af8e74673d",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": false
+      }
+    },
+    "image_with_text_EfmXjj": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_nAiTLR": {
+          "type": "heading",
+          "settings": {
+            "heading": "天然藍へのこだわり",
+            "heading_size": "h2"
+          }
+        },
+        "text_8BAWyd": {
+          "type": "text",
+          "settings": {
+            "text": "<p>私たちの藍染に使う藍は、阿波の大地で丁寧に育てられたものです。地元の藍畑で栽培される藍は、土地への深い愛と誠実さから生まれるもの。化学薬品を一切使わず、品質の良い藍を使用して、私たちは製品を染め上げ、阿波の美しさを全国の皆様へお届けしています。<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_nAiTLR",
+        "text_8BAWyd"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/about-1.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-143e1028-dfa9-4a81-a526-e0af3555ba10",
+        "color_scheme": "scheme-143e1028-dfa9-4a81-a526-e0af3555ba10",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_zeNakr": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_UhpJFk": {
+          "type": "heading",
+          "settings": {
+            "heading": "職人の手仕事",
+            "heading_size": "h2"
+          }
+        },
+        "text_LgMf77": {
+          "type": "text",
+          "settings": {
+            "text": "<p>藍染工房あわの製品は、職人たちの手仕事によって一点一点丁寧に制作されます。職人の魔法が込められた製品は、日常に特別な価値をもたらし、阿波の自然からインスパイアを受けた藍染アートがお楽しみいただけます。<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_UhpJFk",
+        "text_LgMf77"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/about-2_1.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-143e1028-dfa9-4a81-a526-e0af3555ba10",
+        "color_scheme": "scheme-143e1028-dfa9-4a81-a526-e0af3555ba10",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_tJkqH7": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_kNfdJH": {
+          "type": "heading",
+          "settings": {
+            "heading": "天然藍染工房あわ",
+            "heading_size": "h2"
+          }
+        },
+        "text_PcGkFN": {
+          "type": "text",
+          "settings": {
+            "text": "<p>営業時間 　　11:00〜16:00<br\/>休日 　　　　不定休<br\/>住所 　　　　徳島県藍住町00-00<br\/>電話 　　　　012-345-6789<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_kNfdJH",
+        "text_PcGkFN"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/about-3_1.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_KPMtxE": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_VXHzKi": {
+          "type": "heading",
+          "settings": {
+            "heading": "藍染体験教室",
+            "heading_size": "h2"
+          }
+        },
+        "text_JhUg8q": {
+          "type": "text",
+          "settings": {
+            "text": "<p>『天然藍染工房あわ』では、藍染体験教室も不定期に開催しています。<br\/>大自然の中で、藍染の魔法を体験し、自分自身で美しい模様を生み出す喜びを感じてみませんか？<br\/>家族や友人と一緒に、藍染の世界を探求しましょう。<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_VXHzKi",
+        "text_JhUg8q"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-143e1028-dfa9-4a81-a526-e0af3555ba10",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "collage_zCzgYh": {
+      "type": "collage",
+      "blocks": {
+        "image_pHrGLE": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/about-grid-1.jpg"
+          }
+        },
+        "image_feBHq3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/about-grid-2.jpg"
+          }
+        },
+        "image_4WN7Lz": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/about-grid-3.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_pHrGLE",
+        "image_feBHq3",
+        "image_4WN7Lz"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "desktop_layout": "right",
+        "mobile_layout": "column",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "scheme-143e1028-dfa9-4a81-a526-e0af3555ba10",
+        "padding_top": 36,
+        "padding_bottom": 84
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_UKAedt",
+    "image_with_text_EfmXjj",
+    "image_with_text_zeNakr",
+    "image_with_text_tJkqH7",
+    "rich_text_KPMtxE",
+    "collage_zCzgYh"
+  ]
+}

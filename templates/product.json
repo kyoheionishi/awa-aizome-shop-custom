@@ -1,0 +1,142 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "collapsible_tab_zhxAeQ": {
+          "type": "collapsible_tab",
+          "source": "{{ product.metafields.custom.material.value }}",
+          "settings": {
+            "heading": "素材",
+            "icon": "check_mark",
+            "content": "<p>{{ product.metafields.custom.material.value.text.value }}<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_rXbbJc": {
+          "type": "collapsible_tab",
+          "source": "{{ product.metafields.custom.size.value }}",
+          "settings": {
+            "heading": "サイズ",
+            "icon": "check_mark",
+            "content": "<p>{{ product.metafields.custom.size.value.text.value }}<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_KypRJG": {
+          "type": "collapsible_tab",
+          "source": "{{ product.metafields.custom.precautions.value }}",
+          "settings": {
+            "heading": "注意事項",
+            "icon": "check_mark",
+            "content": "<p>{{ product.metafields.custom.precautions.value.description | metafield_tag }}<\/p>",
+            "page": ""
+          }
+        },
+        "custom_liquid_74HFTj": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% assign dyeing_technique = product.metafields.custom.dyeing_technique %}\n{% assign indigo_type = product.metafields.custom.indigo_type %}\n{% assign pattern_type = product.metafields.custom.pattern_type %}\n\n\n{% assign dyeing_technique_options = \"板締め,絞り染め,型染め\" | split: ',' %}\n{% assign indigo_type_options = \"阿波藍,琉球藍,木藍\" | split: ',' %}\n{% assign pattern_type_options = \"麻の葉,七宝,鮫小紋\"| split: ',' %}\n\n{% comment %} 最大の列幅を取る {% endcomment %}\n{% assign max_cols = dyeing_technique_options.size %}\n{% if indigo_type_options.size > max_cols %}\n    {% assign max_cols = indigo_type_options.size %}\n{% endif %}\n{% if pattern_type_options.size > max_cols %}\n    {% assign max_cols = pattern_type_options.size %}\n{% endif %}\n\n\n{% if dyeing_technique or indigo_type or pattern_type %}\n<div class=\"indigo-proparties\">\n<h3 class=\"indigo-proparties__title\">藍染特性<\/h3>\n\n<div class=\"indigo-proparties__scroll\">\n<table class=\"indigo-proparties__table\">\n\n{% comment %} 染色技法 {% endcomment %}\n{% if dyeing_technique %}\n<tr class=\"indigo-proparties__row\">\n    <th class=\"indigo-proparties__header\">染色技法<\/th>\n    {% for option in dyeing_technique_options %}\n    <td class=\"indigo-proparties__cell {% if dyeing_technique == option %}is-active{% else %}is-inactive{% endif %}\">{{ option }}<\/td>\n    {% endfor %}\n<\/tr>\n{% endif %}\n\n{% comment %} 藍の種類 {% endcomment %}\n{% if indigo_type %}\n<tr class=\"indigo-proparties__row\">\n    <th class=\"indigo-proparties__header\">藍の種類<\/th>\n    {% for option in indigo_type_options  %}\n    <td class=\"indigo-proparties__cell {% if indigo_type == option %}is-active{% else %}is-inactive{% endif %}\">{{ option }}<\/td>\n    {% endfor %}\n<\/tr>\n{% endif %}\n\n{% comment %} 文様 {% endcomment %}\n\n{% if pattern_type %}\n<tr class=\"indigo-proparties__row\">\n    <th class=\"indigo-proparties__header\">文様<\/th>\n    {% for option in pattern_type_options %}\n    <td class=\"indigo-proparties__cell {% if pattern_type == option %}is-active{% else %}is-inactive{% endif %}\">{{ option }}<\/td>\n    {% endfor %}\n<\/tr>\n{% endif %}\n\n\n<\/table>\n<\/div>\n<\/div>\n{% endif %}\n\n<style>\n.indigo-proparties{\n\n}\n\n.indigo-proparties__title{\n    font-size: 1.8rem;\n    font-weight: 600;\n    border-bottom: 2px solid #1a4b7c;\n    padding-bottom: 8px;\n\n}\n\n.indigo-proparties__scroll{\n    overflow-x: auto;\n    -webkit-overflow-scrolling: touch;\n}\n\n.indigo-proparties__table{\n    width: 100%;\n}\n\n.indigo-proparties__row{\n    display: flex;\n}\n\n.indigo-proparties__header{\n    position: sticky;\n    left: 0;\n    z-index: 2;\n    font-size: 1.4rem;\n    font-weight: 600;\n    background-color: #e8f1f9;\n    color: #1a4b7c;\n    text-align: left;\n    padding: 10px;\n    min-width: 100px;\n}\n\n.indigo-proparties__cell{\n    font-size: 1.2rem;\n    background-color: #f5f5f5;\n    padding: 10px;\n    text-align: center;\n    flex: 0 0 calc( 100% \/ {{ max_cols }});\n}\n\n.indigo-proparties__cell.is-active{\n    background-color: #1a4b7c;\n    color: #fff;\n    font-weight: 600;\n}\n\n.indigo-proparties__cell.is-inactive{\n    opacity: 0.5;\n}\n\n\n\n<\/style>"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "description",
+        "collapsible_tab_zhxAeQ",
+        "collapsible_tab_rXbbJc",
+        "collapsible_tab_KypRJG",
+        "custom_liquid_74HFTj"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-a0f7effc-367b-495d-9dea-a505c75bbaab",
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "stacked",
+        "mobile_thumbnails": "hide",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "o_profile_7wFXFj": {
+      "type": "o-profile",
+      "settings": {
+        "title": "職人紹介",
+        "artisan_image": "{{ product.metafields.custom.artisan_profile.value.image.value }}",
+        "artisan_name": "{{ product.metafields.custom.artisan_profile.value.name.value }}",
+        "artisan_years": "藍染歴: {{ product.metafields.custom.artisan_profile.value.years.value }}年",
+        "artisan_specialty": "専門:{{ product.metafields.custom.artisan_profile.value.specialty.value }}",
+        "artisan_biography": "<p>{{ product.metafields.custom.artisan_profile.value.biography | metafield_tag }}<\/p>",
+        "artisan_philosophy": "<p>{{ product.metafields.custom.artisan_profile.value.philosophy | metafield_tag }}<\/p>",
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "padding_top_sp": 36,
+        "padding_bottom_sp": 36,
+        "color_scheme": ""
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "あなたへのおすすめ",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "main",
+    "o_profile_7wFXFj",
+    "related-products"
+  ]
+}

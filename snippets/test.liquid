@@ -1,0 +1,124 @@
+
+{% assign dyeing_technique = product.metafields.custom.dyeing_technique %}
+{% assign indigo_type = product.metafields.custom.indigo_type %}
+{% assign pattern_type = product.metafields.custom.pattern_type %}
+
+
+{% assign dyeing_technique_options = "板締め,絞り染め,型染め" | split: ',' %}
+{% assign indigo_type_options = "阿波藍,琉球藍,木藍" | split: ',' %}
+{% assign pattern_type_options = "麻の葉,七宝,鮫小紋"| split: ',' %}
+
+{% comment %} 最大の列幅を取る {% endcomment %}
+{% assign max_cols = dyeing_technique_options.size %}
+{% if indigo_type_options.size > max_cols %}
+    {% assign max_cols = indigo_type_options.size %}
+{% endif %}
+{% if pattern_type_options.size > max_cols %}
+    {% assign max_cols = pattern_type_options.size %}
+{% endif %}
+
+
+{% if dyeing_technique or indigo_type or pattern_type %}
+<div class="indigo-proparties">
+<h3 class="indigo-proparties__title">藍染特性</h3>
+
+<div class="indigo-proparties__scroll">
+<table class="indigo-proparties__table">
+
+{% comment %} 染色技法 {% endcomment %}
+{% if dyeing_technique %}
+<tr class="indigo-proparties__row">
+    <th class="indigo-proparties__header">染色技法</th>
+    {% for option in dyeing_technique_options %}
+    <td class="indigo-proparties__cell {% if dyeing_technique == option %}is-active{% else %}is-inactive{% endif %}">{{ option }}</td>
+    {% endfor %}
+</tr>
+{% endif %}
+
+{% comment %} 藍の種類 {% endcomment %}
+{% if indigo_type %}
+<tr class="indigo-proparties__row">
+    <th class="indigo-proparties__header">藍の種類</th>
+    {% for option in indigo_type_options  %}
+    <td class="indigo-proparties__cell {% if indigo_type == option %}is-active{% else %}is-inactive{% endif %}">{{ option }}</td>
+    {% endfor %}
+</tr>
+{% endif %}
+
+{% comment %} 文様 {% endcomment %}
+
+{% if pattern_type %}
+<tr class="indigo-proparties__row">
+    <th class="indigo-proparties__header">文様</th>
+    {% for option in pattern_type_options %}
+    <td class="indigo-proparties__cell {% if pattern_type == option %}is-active{% else %}is-inactive{% endif %}">{{ option }}</td>
+    {% endfor %}
+</tr>
+{% endif %}
+
+
+</table>
+</div>
+</div>
+{% endif %}
+
+<style>
+.indigo-proparties{
+
+}
+
+.indigo-proparties__title{
+    font-size: 1.8rem;
+    font-weight: 600;
+    border-bottom: 2px solid #1a4b7c;
+    padding-bottom: 8px;
+
+}
+
+.indigo-proparties__scroll{
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.indigo-proparties__table{
+    width: 100%;
+}
+
+.indigo-proparties__row{
+    display: flex;
+}
+
+.indigo-proparties__header{
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    font-size: 1.4rem;
+    font-weight: 600;
+    background-color: #e8f1f9;
+    color: #1a4b7c;
+    text-align: left;
+    padding: 10px;
+    min-width: 100px;
+}
+
+.indigo-proparties__cell{
+    font-size: 1.2rem;
+    background-color: #f5f5f5;
+    padding: 10px;
+    text-align: center;
+    flex: 0 0 calc( 100% / {{ max_cols }});
+}
+
+.indigo-proparties__cell.is-active{
+    background-color: #1a4b7c;
+    color: #fff;
+    font-weight: 600;
+}
+
+.indigo-proparties__cell.is-inactive{
+    opacity: 0.5;
+}
+
+
+
+</style>
